@@ -106,12 +106,12 @@ ABOUT US
 
 }
 .Aboutusinnercontent{
-  margin-left: 250px;
-  max-width: 940px;
+  margin-left: 0;
+  max-width: 100%;
   padding-left: 10px;
   padding-top: 10px;
   width: 100%;
-  height: 850px;
+  height: 880px;
   box-sizing: border-box;
   background-color: whitesmoke ;
   border-radius: 15px;
@@ -191,10 +191,10 @@ COURSE OFFERED
       padding: 5px;
     }
     .course-container {
-      padding-left: 40px ;
+      padding-left: 2px ;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
       width: 94%;
     }
 
