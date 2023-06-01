@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+/*
+=====================================
+PRELOADER
+=====================================
+*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preloader:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 6px solid #3498db;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*
+========================================
+PRELOADER END
+=======================================
+*/
+/*
+==========================================
+MOBILE COMPACT VIEW
+==========================================
+*/
+/* CSS for desktop */
+/* Mobile Styles */
+
+/*
+=======================================
+MOBILE COMPACT VIEW END
+=======================================
+*/
+/*
+=======================================
+NAVBAR START
+=======================================
+*/
+body {
+
+  margin: 0;
+  padding: 0;
+  background-color: #AEE4FF;
+
+}
+
+
+
+
+
+
+
+
+  .image-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider {
+    display: flex;
+    animation: scrollImages 30s linear infinite;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  @keyframes scrollImages {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-1800px); /* Adjust the value based on the total width of all images */
+    }
+  }
+
+</style>
+<script >
+/*
+=========================================
+PRE LOADER
+==========================================
+*/
+
+
+window.addEventListener('load', function() {
+  const preloader = document.querySelector('.preloader');
+  preloader.style.display = 'none';
+});
+/*
+==================================================
+PRELOADER ENDS
+===================================================
+*/
+/*
+==================================================
+NAVBAR START
+================================================
+*/
+
+/*
+====================================================
+NAVBAR ENDS
+====================================================
+*/
+/*
+==================================================
+HOME BODY
+==============================================
+*/
+
+/*
+===============================================
+HOME BODY END
+================================================
+*/
+
+let slideIndex = 1;
+	showSlide(slideIndex);
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+};
+
+function prevSlide() {
+  showSlide(slideIndex -= 1);
+};
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {
+    slideIndex = 1;
+  };
+  if (n < 1) {
+    slideIndex = slides.length;
+  };
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slides[slideIndex-1].classList.add("active");
+};
+
+
+
+</script>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="developer" content="S.Tarakananda Reddy">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="pc.css">
+  <link rel="stylesheet" href="tablet.css">
+	<title>Dakshitha Future's</title>
+</head>
+
+	<body class="container">
+	<!--PRELOADER-->
+    <div class="preloader"></div>
+     <!--PRELOADER END-->
+	<!-- Start header -->
+	<nav class="navbar">
+    	<div class="navbar-logo">
+      		<a href="#">Dakshitha Futures</a>
+    	</div>
+    	<ul class="navbar-menu">
+      		<li><a href="#">Home</a></li>
+      		<li><a href="#">About us</a></li>
+      		<li><a href="#">Courses</a></li>
+      		<li><a href="#">Testinomials</a></li>
+      		<li><a href="#">Contact</a></li>
+      		<li id="navbar-Enroll"><a href="#">Enroll Now</a></li>
+    	</ul>
+  	</nav>
+	
+<!--2nd session-->
+	<div class="background-image">
+		<div class="Home-Content">
+		<h1><p><div class="dynamic-text" id="my-text">Don't predict the future.</div><div>Create it by joining with us</div><div> to level up your skills</div></p></h1>
+	</div>
+	<div class="Explore">
+		<div class="Explore-inner">
+			<a href="#" id="decor">Explore</a>
+		</div>
+	</div>
+	</div>
+	
+	<!--About US-->
+	<div class="Aboutusoutermost">
+	<div class ="Aboutusouterdiv">
+		<h1>ABOUT US</h1>
+	</div>
+	
+	<div class= "Aboutusinnercontent">
+		<div class="vision-outercontent">VISION</div>
+		<br>
+		<div class="vision-innercontent"><li>To empower students globally with accessible and innovative education, enabling them to unlock their full potential and shape a successful future.</li></div>
+		<br>
+		<div class="mission-outercontent">MISSION</div>
+		<div class="mission-innercontent"><div class="mission-inner">Our mission is to revolutionize education through technology, providing comprehensive and personalized learning experiences to students of all ages and backgrounds. We aim to:</div>
+		<p align=”justify”>
+			<ol>
+			<li>Foster Lifelong Learning: We believe that learning is a continuous journey, and our goal is to instill a love for learning in students. By offering a wide range of courses, we enable students to pursue their interests, expand their knowledge, and develop valuable skills throughout their lives.</li><br>
+			<li>Enhance Accessibility: We are committed to breaking down barriers to education by making high-quality courses accessible to students worldwide, regardless of their location, socioeconomic background, or physical abilities. Our platform leverages technology to ensure that anyone with an internet connection can access the education they deserve.</li><br>
+			<li>Personalize Education: Recognizing that each student has unique learning needs, we employ data-driven insights and adaptive learning techniques to tailor courses to individual learners. By providing personalized feedback, adaptive assessments, and customized learning paths, we enable students to learn at their own pace and in their preferred style.</li><br>
+			<li>Empower Educators: We value the critical role of educators in guiding and inspiring students. Our platform supports educators by equipping them with tools, resources, and professional development opportunities to enhance their teaching practices. We strive to create a collaborative environment where educators can connect, share knowledge, and innovate together.</li><br>
+			<li>Embrace Innovation: As an edutech company, we embrace technological advancements and leverage them to deliver cutting-edge educational solutions. We continuously explore emerging technologies such as artificial intelligence, virtual reality, and gamification to create immersive and engaging learning experiences that captivate and motivate students.</li><br>
+			<li>Cultivate Global Citizenship: In a rapidly changing world, we aim to foster global citizenship and prepare students for the challenges and opportunities of the future. Our courses emphasize critical thinking, creativity, problem-solving, cultural awareness, and empathy, empowering students to become responsible and active contributors to their communities and the world.</li><br>
+			<li>Measure Impact: We are committed to measuring and evaluating the impact of our courses on student learning outcomes. By collecting data and conducting research, we strive to continuously improve our offerings and ensure that our students achieve tangible results and long-term success.</li></ol>
+		<div class="mission-inner">By embodying our vision and mission, we aspire to transform education, bridge educational gaps, and create a brighter future for students worldwide.</div></p></div>
+	</div>
+	<div class="entire-courseoutter">
+		<div class="course-headinginner">COURSES</div>
+		<div class="course-container" id="course-container"></div>
+	</div>
+<!--
+===============================================
+COURSE OFFERED
+================================================
+-->
+<script>
+	 var courses = [
+      { title: "Machine Learning With Python", description: " " },
+      { title: "DevOps", description: " " },
+      { title: "Data Science", description: " " },
+      { title: "Artificial Intelligence", description: " " },
+      { title: "Web Development", description: " " },
+      { title: "Cyber Security", description: " " },
+      { title: "Cloud Computing", description: " " },
+      { title: "Android Development", description: " " },
+      { title: "Internet of Things (IOT)", description: " " },
+      { title: "Robotics", description: " " },
+      { title: "Hybrid and Electrical Vehicles", description: " " },
+      { title: "AUTOCAD", description: " " },
+      { title: "IC Engines", description: " " },
+      { title: "Construction Planning and Management", description: " " },
+      { title: "Embeded Systems", description: " " },
+      { title: "Data Analytics", description: " " },
+      { title: "Genetic Engineering", description: " " },
+    ];
+
+   var courseContainer = document.getElementById('course-container');
+
+// Generate course boxes dynamically
+courses.forEach(function(course) {
+  var courseBox = document.createElement('div');
+  courseBox.classList.add('course-box');
+  courseBox.innerHTML = '<h2>' + course.title + '</h2><p>' + course.description + '</p>';
+
+  var exploreItem = document.createElement('p');
+  exploreItem.classList.add('explore-item');
+  exploreItem.textContent = 'Explore Now';
+
+  // Add hover event listener to show "Explore Now" item
+  courseBox.addEventListener('mouseenter', function() {
+    courseBox.appendChild(exploreItem);
+  });
+
+  // Add mouseleave event listener to hide "Explore Now" item
+  courseBox.addEventListener('mouseleave', function() {
+    courseBox.removeChild(exploreItem);
+  });
+
+  courseContainer.appendChild(courseBox);
+});
+</script>
+<br>
+<br>
+<!--
+=============================================
+COURSE OFFERED END 
+===========================================
+-->
+<!--	<div class="Aluminiworkat">
+		<h1>Our Alumini Work at</h1>
+	</div>
+	
+  <div class="image-container">
+    <img class="image" src="images/tcs.png" alt="Image 1">
+    <img class="image" src="images/infosys.png" alt="Image 2">
+    <img class="image" src="images/accenture.png" alt="Image 3">
+    <img class="image" src="images/amazon.png" alt="Image 4">
+    <img class="image" src="images/apple.png" alt="Image 5">
+    <img class="image" src="images/capgemini.png" alt="Image 6">
+    <img class="image" src="images/deloitte.png" alt="Image 7">
+    <img class="image" src="images/google.png" alt="Image 8">
+    <img class="image" src="images/hcl.png" alt="Image 9">
+    <img class="image" src="images/ibm.png" alt="Image 10">
+    <img class="image" src="images/microsoft.png" alt="Image 11">
+    <img class="image" src="images/mindtree.png" alt="Image 12">
+    <img class="image" src="images/qualcomm.png" alt="Image 13">
+    <img class="image" src="images/quantum.svg" alt="Image 14">
+    <img class="image" src="images/techmahindra.png" alt="Image 15">
+  </div>
+  <script>
+    // JavaScript code
+    var imageContainer = document.querySelector('.image-container');
+    var images = Array.from(imageContainer.getElementsByClassName('image'));
+    var position = 0;
+    var intervalId;
+
+    function moveImages() {
+      intervalId = setInterval(function() {
+        position--;
+        imageContainer.style.transform = 'translateX(' + position + 'px)';
+
+        if (position % 1900 === 0) {
+          var firstImage = images.shift();
+          images.push(firstImage);
+          position = 0;
+        }
+      }, 10);
+    }
+
+    moveImages();
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="Aluminiworkat">
+  <h1>Our Alumni Work at</h1>
+</div>
+
+<div class="image-container">
+  <div class="slider">
+    <img class="image" src="images/tcs.png" alt="Image 1">
+    <img class="image" src="images/infosys.png" alt="Image 2">
+    <img class="image" src="images/accenture.png" alt="Image 3">
+    <img class="image" src="images/amazon.png" alt="Image 4">
+    <img class="image" src="images/apple.png" alt="Image 5">
+    <img class="image" src="images/capgemini.png" alt="Image 6">
+    <img class="image" src="images/deloitte.png" alt="Image 7">
+    <img class="image" src="images/google.png" alt="Image 8">
+    <img class="image" src="images/hcl.png" alt="Image 9">
+    <img class="image" src="images/ibm.png" alt="Image 10">
+    <img class="image" src="images/microsoft.png" alt="Image 11">
+    <img class="image" src="images/mindtree.png" alt="Image 12">
+    <img class="image" src="images/qualcomm.png" alt="Image 13">
+    <img class="image" src="images/quantum.svg" alt="Image 14">
+    <img class="image" src="images/techmahindra.png" alt="Image 15">
+  </div>
+</div>
+
+  </script>
+<!--Reviews-->
+	<div class="Reviews">
+		<h1>Reviews</h1>
+  </div>
+  <div class="innerreviews">
+    <div>I recently completed the DevOps course with Dakshitha Futures, and it was an incredible learning experience. The course provided comprehensive knowledge of DevOps principles, tools, and practices, and the instructor's expertise and guidance were exceptional. I highly recommend this course to anyone looking to master DevOps concepts effectively.</div>
+    <div>The DevOps course offered by Dakshitha Futures was a comprehensive and well-structured program. The instructor was knowledgeable and engaging, and the course materials were relevant and up-to-date. Overall, I would highly recommend this course to anyone interested in learning about DevOps"</div>	
+  </div>
+</div>
+</body>
+</html>
